@@ -22,7 +22,7 @@ img {
 }
 
 a {
- color: #9FADBF;   
+ color: #9FADBF;
 }
 
 a:hover {
@@ -33,7 +33,7 @@ h1 {
     font-size: 80px;
     color: #153259;
     text-shadow: -1px 0 #9FADBF, 0 1px #9FADBF, 1px 0 #9FADBF, 0 -1px #9FADBF;
-    
+
 }
 
 h2 {
@@ -52,15 +52,65 @@ h1, h2 {
     padding: 60px 0;
 }
 
+/* nav -----*/
+
+nav a {
+    text-decoration: none;
+    color: #F7FFF7;
+}
+
+nav ul {
+  text-align: center;
+  list-style: none;
+  background: #343434;
+  color: #F7FFF7;
+  margin: 0;
+}
+
+nav ul li {
+  font: sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+  padding: 20px 40px;
+  background: #343434;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background: #8C5A71;
+}
+
+nav ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 61px;
+  left: -10000px;  
+  width: 200px;
+  
+}
+
+nav ul li ul li {
+  background: #343434;
+  display: block;
+}
+
+nav li ul li:hover {
+  background: #8C5A71;
+}
+
+nav ul li:hover ul {
+  display: block;
+  left: 0px;
+}
 
 /* Profile ----------------- */
- 
+
 header {
     background: #153259;
     color: #F7FFF7;
     text-align: center;
 }
-
 
 /* Projects ------------*/
 
