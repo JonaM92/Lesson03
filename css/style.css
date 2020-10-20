@@ -8,6 +8,27 @@ html {
     box-sizing: inherit;
 }
 
+
+h3 {
+    margin-bottom: 0;   
+}
+
+.item-detail h3 + p {
+    font-style: italic;
+}
+
+.item-detail h3 ~ p {
+    margin: 0;
+}
+
+.bar > section {
+    border-bottom: 1px solid #9FADBF;
+}
+
+.bar > section:last-of-type {
+    border-bottom: none;
+}
+
 body {
     color:#343434;
     margin: 0;
@@ -47,12 +68,14 @@ h1, h2 {
 }
 
 .content-wrap {
-    width: 800px;
+    max-width: 800px;
+    width: 80%;
     margin: 0 auto;
     padding: 60px 0;
 }
 
 /* nav -----*/
+
 
 nav a {
     text-decoration: none;
@@ -70,8 +93,6 @@ nav ul {
 nav ul li {
   font: sans-serif;
   font-weight: 400;
-  display: inline-block;
-  position: relative;
   padding: 20px 40px;
   background: #343434;
   cursor: pointer;
@@ -109,7 +130,6 @@ nav ul li:hover ul {
 header {
     background: #153259;
     color: #F7FFF7;
-    text-align: center;
 }
 
 /* Projects ------------*/
@@ -137,14 +157,9 @@ header {
 
 .project-item {
     overflow: hidden;
-    border-bottom: 1px dashed #153259;
     padding: 25px 0;
 }
 
-.project-item img {
-    float: left;
-    margin-right: 20px;
-}
 
 .project-item h3 {
     margin-top: 0;
@@ -156,15 +171,78 @@ header {
     color: #F7FFF7;
 }
 
-.work-item {
-    border-bottom: 1px solid #9FADBF;
-}
 
 /* Education ----------------- */
+.education {
+    background-image: url(../images/education-back.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 50px;
+}
+
+.education p {
+    width: 60%;
+}
 
 /* Contact info ----------*/
 
 footer {
     background: #343434;
     color: #F7FFF7;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list a {
+    padding: 15px;
+    display: inline-block;
+}
+
+
+/* Responsive ----------*/
+
+@media screen and (min-width:750px) {
+    header, footer {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        position: relative;
+    }
+
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .work-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 15px;
+    }
+
+    .contact-list {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:749px) {
+    h1 {
+        font-size: 70px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        line-height: 1;
+    }
+
+    .contact-list a {
+        padding: 5px;
+    }
 }
